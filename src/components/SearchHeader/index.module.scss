@@ -1,0 +1,48 @@
+.navHeader {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.navHeaderLeft {
+  flex: 1;
+  height: 34px;
+  padding: 5px 5px 5px 8px;
+  margin: 0 10px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.location {
+  font-size: 14px;
+}
+
+.form {
+  margin-left: 12px;
+  border-left: 1px solid #e5e5e5;
+  color: #9c9fa1;
+}
+
+:global {
+  .icon-map {
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .icon-arrow {
+    color: #7f7f80;
+    font-size: 12px;
+  }
+
+  .icon-seach {
+    vertical-align: middle;
+    padding: 0 2px 0 12px;
+    font-size: 15px;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}

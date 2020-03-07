@@ -14,7 +14,7 @@ const tabList = [
   { title: '我的', path: '/home/profile', icon: 'my'}
 ]
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -23,7 +23,6 @@ export default class Home extends Component {
       fullScreen: true,
     }
   }
-
   renderContent() {
     return (
       <div>
@@ -70,3 +69,4 @@ export default class Home extends Component {
     );
   }
 }
+export default Home
