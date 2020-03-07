@@ -34,7 +34,13 @@ export default class Home extends Component {
       </div>
     )
   }
-
+  componentDidUpdate(prevProps){
+   if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.setState({
+        selectedTab: this.props.location.pathname
+      })
+   }
+  }
   render() {
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
@@ -53,14 +59,11 @@ export default class Home extends Component {
             selected={this.state.selectedTab === item.path}
             onPress={() => {
               this.props.history.push(item.path)
-              this.setState({
-                selectedTab: item.path,
-              });
             }}
             data-seed="logId"
           >
             {this.renderContent('home')}
-          </TabBar.Item>
+          </TabBar.Item> 
           })}
         </TabBar>
       </div>

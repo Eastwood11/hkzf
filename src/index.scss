@@ -1,4 +1,7 @@
 *{
+  margin: 0;
+  padding: 0;
+  list-style:none;
   h2{
     font-size: 13px;
     color: #333333;
@@ -6,7 +9,27 @@
     margin: 0;
   }
 }
+.am-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+#root{
+  height: 100%;
+}
+html {
+  height:100%
+  }    
+#container {
+  height:100%
+  } 
+  .app{
+    height: 100%;
+  }
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
