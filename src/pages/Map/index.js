@@ -8,11 +8,12 @@ import { Toast } from 'antd-mobile'
 
 // 导入顶部导航栏组件
 import NavHeader from '../../components/NavHeader'
+import HouseItem from '../../components/HouseItem'
 
 // 导入 css modules 文件
 import styles from './index.module.scss'
 
-import { getCurCity, API, BASE_URL } from '../../utils'
+import { getCurrentCity, API } from '../../utils'
 
 const BMap = window.BMap
 // 覆盖物样式
@@ -38,7 +39,7 @@ export default class Map extends Component {
     // 获取当前定位城市
     // label 表示：当前城市名称
     // value 表示：当前城市的id
-    const { label, value } = await getCurCity()
+    const { label, value } = await getCurrentCity()
 
     // 创建百度地图的实例对象
     const map = new BMap.Map('container')
@@ -294,37 +295,9 @@ export default class Map extends Component {
 
   // 渲染房源列表
   renderHouseList() {
+    // 注意： 列表渲染时，遍历谁，就把key加给谁，而不要放在组件内部结构中
     return this.state.list.map(item => (
-      <div className={styles.house} key={item.houseCode}>
-        <div className={styles.imgWrap}>
-          <img
-            className={styles.img}
-            src={`${BASE_URL}${item.houseImg}`}
-            alt=""
-          />
-        </div>
-        <div className={styles.content}>
-          <h3 className={styles.title}>{item.title}</h3>
-          <div className={styles.desc}>{item.desc}</div>
-          <div>
-            {item.tags.map((item, index) => {
-              // index + 1 就是对应 tag 的类名
-              // console.log(`tag${index + 1}`)
-              // 说明：因为 tag 类名，只有3个，所以，如果超过 3 个tag，后面的 tag 都使用最后一个类名
-              const tagClass =
-                index > 2 ? styles.tag3 : styles[`tag${index + 1}`]
-              return (
-                <span key={index} className={cls(styles.tag, tagClass)}>
-                  {item}
-                </span>
-              )
-            })}
-          </div>
-          <div className={styles.price}>
-            <span className={styles.priceNum}>{item.price}</span> 元/月
-          </div>
-        </div>
-      </div>
+      <HouseItem key={item.houseCode} {...item}></HouseItem>
     ))
   }
 

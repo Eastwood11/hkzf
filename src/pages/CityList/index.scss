@@ -1,9 +1,6 @@
 // 顶部导航栏样式
 .citylist {
   height: 100%;
-  .list{
-    padding-top: 45px;
-  }
 }
 
 // 在 CityList 页面中，添加了样式
@@ -40,7 +37,7 @@
   z-index: 1;
   height: 90%;
   box-sizing: border-box;
-  padding-top: 45px;
+  padding-top: 20px;
   text-align: center;
   .city-index-item {
     flex: 1;

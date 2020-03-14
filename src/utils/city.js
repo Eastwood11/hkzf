@@ -1,6 +1,14 @@
-const city_key = 'hkzf_city'
+/**
+ * 当前定位城市 - 本地缓存的处理
+ */
 
-const getCity = () => JSON.parse(localStorage.getItem(city_key))
-const setCity = (city) => localStorage.setItem(city_key,JSON.stringify(city))
+// 使用常量来存储键
+const CITY_KEY = 'itcast_city'
 
-export { getCity, setCity}
+// 1 获取当前定位城市
+const getCity = () => JSON.parse(localStorage.getItem(CITY_KEY))
+
+// 2 保存当前定位城市
+const setCity = city => localStorage.setItem(CITY_KEY, JSON.stringify(city))
+
+export { getCity, setCity }

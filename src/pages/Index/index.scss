@@ -1,70 +1,31 @@
-.Carousel{
+// 顶部导航栏样式
+.swipper-wrap {
   position: relative;
-  img{
-    width: 100%;
-  }
+  // 因为只要 轮播图 中添加该样式，就可以解决 轮播图 手动滑动时的 错误
+  // 所以，我们只将该样式添加给当前元素即可。
+  touch-action: none;
 }
-.topSearch{
-  position: absolute;
-  width: 100%;
-  top: 25px;
-  z-index: 1;
-  padding: 0 10px;
-  .left{
-    flex: 1 1;
-    height: 34px;
-    margin: 0 10px;
-    padding: 5px 5px 5px 8px;
-    border-radius: 3px;
-    background-color: #fff;
-    .area{
-      padding-right: 12px;
-      border-right: solid 1px #e5e5e5;
-      span{
-        font-size: 14px;
-        font-family: 'Microsoft Yahei';
-        margin-right: 3px;
-      }
-      i{
-        font-size: 12px;
-        color: #7f7f80;
-      }
-    }
-    .search{
-      margin-left: 12px;
-      line-height: 16px;
-      i{
-        vertical-align: middle;
-        padding: 0 2px 0 12px;
-        color: #9c9fa1;
-        font-size: 15px;
-      }
-      span{
-        padding-left: 4px;
-        font-size: 13px;
-        color: #9c9fa1;
-      }
-    }
-  }
-  .icon-map{
-    font-size: 25px;
-    color: #fff;
-  }
-}
+
+/* 导航菜单的样式 */
 .menus {
-padding: 10px 0;
-.content{
-  text-align: center;
-  img{
+  padding: 10px 0;
+
+  .am-flexbox-item {
+    text-align: center;
+  }
+  img {
     width: 48px;
     height: 48px;
-    display: inline-block;
   }
-  h2{
+  h3 {
     margin-top: 7px;
+    font-size: 13px;
+    color: #333;
+    font-weight: normal;
   }
 }
-}
+
+// 租房小组
 .groups {
   overflow: hidden;
   padding: 0 10px;

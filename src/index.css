@@ -1,0 +1,45 @@
+/* 全局样式 */
+html,
+body {
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  /* 解决轮播图手动滑动时 Chrome 浏览器错误警告的问题 */
+  /* 该 css 样式（值为 none 时），会导致 触摸事件 无效，也就无法通过 触摸行为 来滑动页面 */
+  /* touch-action: none; */
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 给 body 添加的样式，来解决 弹出对话框 页面还能滚动的问题 */
+.fixed {
+  overflow: hidden;
+}
+
+/* 清除 margin */
+h1,
+h3,
+ul,
+dd,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

@@ -1,7 +1,11 @@
 import React from 'react'
+
 import { Flex } from 'antd-mobile'
+
 import classnames from 'classnames'
+
 import styles from './index.module.css'
+
 // 条件筛选栏标题数组：
 const titleList = [
   { title: '区域', type: 'area' },
@@ -11,7 +15,6 @@ const titleList = [
 ]
 
 export default function FilterTitle(props) {
-  // console.log('FilterTitle 子组件 props:', props)
   return (
     <Flex align="center" className={styles.root}>
       {titleList.map(item => {

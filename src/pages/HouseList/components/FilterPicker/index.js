@@ -12,15 +12,7 @@ export default class FilterPicker extends Component {
 
   // constructor(props) {
   //   super(props)
-  //
-  //   console.log('FilterPicker 组件 constructor 加载了')
-  //
-  //   this.state = {
-  //     // 用来存储 PickerView 组件选中值
-  //     // value: null
-  //     // value: ['area', 'AREA|a1417707-f2c1-e5ef', 'null']
-  //     value: this.props.selected
-  //   }
+  //   console.log('FilterPicker constructor 挂载了')
   // }
 
   // 获取选中值
@@ -49,6 +41,9 @@ export default class FilterPicker extends Component {
           底部按钮
           
           this.props.onCancel() 表示调用父组件中的 onCancel
+
+          onCancel 就是 取消 按钮的单击事件
+          onOK 就是 确定 按钮的单击事件
         */}
         <FilterFooter
           onCancel={() => this.props.onCancel()}

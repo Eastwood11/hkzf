@@ -1,0 +1,35 @@
+// .root {
+//   .navHeader {
+//     background-color: #f6f5f6;
+//     :global {
+//       .am-navbar-title {
+//         color: #333;
+//       }
+//     }
+//   }
+// }
+
+// // 注意： 以下两个类名 一个是组件库自带的类名，一个是字体图标自带的类名
+// //       这两个类名，都是不能修改的！！！
+// :global {
+//   .icon-back {
+//     color: #333;
+//   }
+// }
+
+// --
+.navHeader {
+  background-color: #f6f5f6;
+
+  :global {
+    .am-navbar-title {
+      color: #333;
+    }
+  }
+}
+
+:global {
+  .icon-back {
+    color: #333;
+  }
+}

@@ -1,0 +1,16 @@
+.home {
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+/* tababr的样式 */
+.tabbar-wrap {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* tabbar 菜单样式 */
+.tabbar-wrap .iconfont {
+  font-size: 20px;
+}
